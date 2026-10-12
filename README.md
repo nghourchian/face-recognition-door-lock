@@ -72,21 +72,6 @@ Thresholds are configured in `SETTINGS` in `main.py`. The defaults are prototype
 | `face_lock/ui.py` | Preview and status panel |
 | `tests/` | Automated checks |
 
-## Testing and logs
-
-```bat
-.venv\Scripts\python.exe -m unittest discover -s tests -v
-```
-
-Set `label` in `main.py` before running. Suggested labels are `live_self`, `photo_self`, `video_self`, `live_other`, or `unlabeled`. Run a separate session for each presentation. A label is supplied by the operator; the log cannot independently know what was held in front of the camera.
-
-CSV logs contain observations, scores, state transitions, and timing. They contain no video or photos. Enrollment stores biometric embeddings locally. Neither enrollment data, downloaded models, nor logs should be committed; `.gitignore` excludes them.
-
-The 17 automated tests cover lock timing, stale and duplicate frames, PAD resets, profile validation, crop bounds, logs, and UI rendering. They require no camera or model downloads. They do not measure recognition accuracy or spoof resistance.
-
-For camera testing, run each labeled presentation separately in different lighting and at different distances. Check empty views, multiple faces, camera disconnection, automatic relocking, and leaving then returning. Record unexpected outcomes as well as successful attempts.
-
-`processing_ms` measures camera read plus processing. `confirmation_ms` measures the final lock confirmation, excluding the preceding PAD interval. Observations are logged roughly every half-second; transitions are logged when they occur.
 
 ## Scope and next steps
 
