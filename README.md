@@ -1,10 +1,10 @@
 # Face Lock
 
-A webcam-based face recognition project with passive anti-spoofing and a simulated door lock. Built with Python and OpenCV, using pretrained YuNet, SFace, and MiniFASNet models.
+A face recognition project with passive anti-spoofing and a simulated door lock. Built with Python and OpenCV, using pretrained YuNet, SFace, and MiniFASNet models.
 
 The application enrolls one person, compares live face embeddings with their saved profile, checks two anti-spoofing models, and requires a sustained match before unlocking. Camera processing runs in a worker thread so the interface and relock timer can keep running during inference.
 
-**Status:** software prototype. No physical lock or Raspberry Pi integration is included. Passive anti-spoofing reduces some photo and replay attacks; it does not make this system spoof-proof or suitable for securing a real entrance.
+
 
 ## Setup on Windows
 
