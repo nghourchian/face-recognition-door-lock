@@ -1,9 +1,8 @@
-# Face Lock
+# Facial Detection Door Lock
 
-A face recognition project with passive anti-spoofing and a simulated door lock. Built with Python and OpenCV, using pretrained YuNet, SFace, and MiniFASNet models.
+Does it only detect? No.
 
-The application enrolls one person, compares live face embeddings with their saved profile, checks two anti-spoofing models, and requires a sustained match before unlocking. Camera processing runs in a worker thread so the interface and relock timer can keep running during inference.
-
+As misleading as the title may sound, this project goes beyond detecting a face. It compares the detected face against an enrolled user and uses eye and mouth actions as liveness checks before allowing access. The interface displays the similarity score, liveness indicators, and simulated lock status.
 
 
 ## Setup on Windows
