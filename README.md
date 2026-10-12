@@ -2,8 +2,7 @@
 
 Does it only detect? No.
 
-As misleading as the title may sound, this project goes beyond detecting a face. It compares the detected face against an enrolled user and uses eye and mouth actions as liveness checks before allowing access. The interface displays the similarity score, liveness indicators, and simulated lock status.
-
+This project goes beyond detecting a face. It compares the detected face with an enrolled user and uses two passive anti-spoofing models to assess whether the face is live. A match must satisfy the identity and anti-spoofing thresholds over multiple observations before the simulated lock opens. The interface displays the similarity score, both anti-spoofing scores, and the simulated lock status.
 
 ## Setup on Windows
 
